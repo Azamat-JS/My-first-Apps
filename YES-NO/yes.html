@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./yes.css">
+</head>
+<body>
+
+    <h3 class="question">Will we go for a run?</h3>
+
+    <h1 class="title"> <span class="yes">YES</span> / <span class="no">NO</span></h1>
+    
+    <form class="form">
+     <div class="tempContainer">
+        <p class="temp">Today's temperature:</p>
+        <input type="number" class="input" placeholder="enter the temperature">
+     </div>
+    <div class="rainBox">
+
+        <input type="checkbox" class="rainCheck"> 
+        <p class="rain">Is it raining?</p>
+    </div>
+     <div class="gymBox">
+
+         <input type="checkbox" class="gymCheck">
+         <p class="gym">Is the gym open?</p>
+         <button type="button" onclick="running()" class="btn">submit</button>
+        </div>
+
+     </form>
+
+
+    <script src="./yes.js"></script>
+</body>
+</html>
