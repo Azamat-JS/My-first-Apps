@@ -11,37 +11,42 @@
 
 
 //---------------- fs asynchronus ---------
-const {readFile, writeFile} = require('fs')
-
-console.log('start');
+// const {readFile, writeFile} = require('fs')
 
 
-readFile('./content/first.txt', 'utf-8',(err, result)=>{
-    if(err){
-        console.log(err);
-        return
-    }
-const first = result
-readFile('./content/subfolder/second.txt', 'utf-8', (err, result)=>{
-    if(err){
-        console.log(err);
-        return
-    }
-    const second = result
+// readFile('./content/first.txt', 'utf-8',(err, result)=>{
+//     if(err){
+//         console.log(err);
+//         return
+//     }
+// const first = result
+// readFile('./content/subfolder/second.txt', 'utf-8', (err, result)=>{
+//     if(err){
+//         console.log(err);
+//         return
+//     }
+//     const second = result
    
     
-    writeFile(
-        './content/result-sync.txt', 
-        `here is the result : ${first}, ${second}`, (err, result)=>{
-        if(err){
-            console.log(err);
-            return
-        }
-        // console.log(result)
-       setTimeout(()=>{  console.log('done') }, 1000)
+//     writeFile(
+//         './content/result-sync.txt', 
+//         `here is the result : ${first}, ${second}`, (err, result)=>{
+//         if(err){
+//             console.log(err);
+//             return
+//         }
+//         console.log(result)
+       
         
-    })
-})
-})
-console.log('next');
+//     })
+// })
+// })
 
+//--------------- creating function -----------
+const fs = require("fs")
+
+function creatingFile(name){
+ return fs.openSync(`${name}, "w"`)
+}
+
+creatingFile("test.txt")
