@@ -42,11 +42,25 @@
 // })
 // })
 
-//--------------- creating function -----------
+//--------------- creating file -----------
+const path = require("path")
 const fs = require("fs")
+// fs.appendFile('message.txt', 'are you ready', (error) => {
+//     if(error) throw error
+//     console.log('file created');   
+// })
 
-function creatingFile(name){
- return fs.openSync(`${name}, "w"`)
-}
+//--^^^^^^
+// fs.appendFileSync('keys.doc', 'where are the keys?')
 
-creatingFile("test.txt")
+//------------ creating file inside of a folder ------
+
+// fs.mkdir("./folder", () => {
+//     console.log('folder created');  
+// })
+
+// fs.appendFile(path.join(__dirname, "./folder/index.html"), 'text', () => {
+//     console.log('created file')
+// })
+
+

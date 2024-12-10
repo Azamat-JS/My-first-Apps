@@ -15,8 +15,31 @@ const os = require("os");
 
 //------ info about user's system uptime (last reboot)
 
-console.log(`the system uptime is ${os.uptime()} seconds`);
+// console.log(`the system uptime is ${os.uptime()} seconds`);
 
 //------- node js proces uptime -----
 
-console.log(process.uptime());
+// console.log(process.uptime());
+
+//------- cpus ------------------
+
+// console.log(os.cpus());
+
+// setInterval(() => {
+//     const cpus = os.cpus();
+//     cpus.forEach((cpu, index) => {
+//         const {user, sys, idle} = cpu.times;
+//         const total = user + sys + idle;
+//         const usage = ((total - idle) / total) * 100;
+//         console.log(`Cpu ${index}: ${usage.toFixed(2)}% ishlatilmoqda`);
+        
+//     })
+// }, 1000)
+
+//------ type ----------
+
+// console.log(os.type());
+
+//----------------
+
+

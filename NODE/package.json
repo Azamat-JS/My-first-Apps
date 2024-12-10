@@ -1,16 +1,18 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "main": "fsmodul.js",
+  "main": "http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node fsmodul.js"
+    "start": "node http.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "lodash": "^4.17.21",
     "node-device-detector": "^2.1.6"
   }
 }
