@@ -43,7 +43,7 @@
 // })
 
 //--------------- creating file -----------
-const path = require("path")
+
 const fs = require("fs")
 // fs.appendFile('message.txt', 'are you ready', (error) => {
 //     if(error) throw error
@@ -53,14 +53,5 @@ const fs = require("fs")
 //--^^^^^^
 // fs.appendFileSync('keys.doc', 'where are the keys?')
 
-//------------ creating file inside of a folder ------
-
-// fs.mkdir("./folder", () => {
-//     console.log('folder created');  
-// })
-
-// fs.appendFile(path.join(__dirname, "./folder/index.html"), 'text', () => {
-//     console.log('created file')
-// })
 
 
