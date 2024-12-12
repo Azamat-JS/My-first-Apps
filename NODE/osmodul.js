@@ -42,4 +42,12 @@ const os = require("os");
 
 //----------------
 
+// for (const key in os.networkInterfaces()) {
+//   console.log(
+//     `Interfeys: ${key}, IP:${os.networkInterfaces()[key][1].address}, MAC:${
+//       os.networkInterfaces()[key][1].mac
+//     }`
+//   );
+// }
+
 
