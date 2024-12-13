@@ -1,10 +1,10 @@
 {
   "name": "node",
   "version": "1.0.0",
-  "main": "events.js",
+  "main": "http.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon events.js"
+    "start": "nodemon http.js"
   },
   "keywords": [],
   "author": "",

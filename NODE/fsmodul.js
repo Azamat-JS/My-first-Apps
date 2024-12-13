@@ -1,13 +1,17 @@
-// const {readFileSync, writeFileSync} = require('fs')
+const {readFileSync, writeFileSync} = require('fs')
+console.log('start');
 
-// const first = readFileSync('./content/first.txt', "utf-8")
-// const second = readFileSync('./content/subfolder/second.txt', "utf-8")
+const first = readFileSync('./content/first.txt', "utf-8")
+const second = readFileSync('./content/subfolder/second.txt', "utf-8")
 
-// writeFileSync(
-//     './content/result-sync.txt',
-//     `here is the result : ${first}, ${second}`,
-//     {flag: 'a'}
-// )
+writeFileSync(
+    './content/result-sync.txt',
+    `here is the result : ${first}, ${second}`,
+    {flag: 'a'}
+)
+console.log('done with this task');
+console.log('starting the next one');
+
 
 
 //---------------- fs asynchronus ---------
@@ -53,5 +57,14 @@ const fs = require("fs")
 //--^^^^^^
 // fs.appendFileSync('keys.doc', 'where are the keys?')
 
+///------------- reading very big file -------
 
+// const {createReadStream} = require('fs');
+// const stream = createReadStream('./content/result-sync.txt', {
+//     highWaterMark: 90000,
+//    encoding: 'utf-8'})
 
+// stream.on('data', (result) => {
+//     console.log(result);   
+// })
+// stream.on('error', (err) => console.log(err))
