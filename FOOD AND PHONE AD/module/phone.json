@@ -1,0 +1,18 @@
+[
+    {
+        "id": "1",
+        "title": "Iphone XV",
+        "desc": "made in the US",
+        "old_price": "$1200",
+        "new_price": "$1100",
+        "img": "https://i5.walmartimages.com/seo/Restored-Apple-iPhone-15-Pro-Max-512GB-T-Mobile-Blue-Titanium-MU6E3LL-A-Excellent-Condition_dd2d42c6-cc25-4bee-81ef-7847120498d5.663475b807d168a41e9082d258d9c7ce.jpeg"
+    },
+    {
+        "id": "1",
+        "title": "Sumsung A23",
+        "desc": "made in South Korea",
+        "old_price": "$1000",
+        "new_price": "$800",
+        "img": "https://minapi.beemarket.uz/prod-media/productImages/thumbnails/medium/1718190696gRPtsiBlhD7y.webp"
+    }
+]

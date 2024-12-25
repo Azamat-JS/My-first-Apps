@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-danger-subtle">
+    <!-- header -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img
+                    src="https://assets.zenn.com/strapi_assets/Fast_food_logos_18461bbf59.png" alt="photo" width="110"
+                    height="60"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- header -->
+    <!-- slider -->
+    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/originals/f5/b3/d5/f5b3d5f92b3e330dd3bd787c1cf91aa3.jpg"
+                    class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://t3.ftcdn.net/jpg/04/46/37/36/360_F_446373646_uYHx1cGEL6zrndv4xlcElHtHdfa0BF0j.jpg"
+                    class="d-block w-100" alt="..." height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="https://t3.ftcdn.net/jpg/05/93/72/56/360_F_593725698_sb8lB5w7WrwzHXlVYG36W25ZOgoEZjFB.jpg"
+                    class="d-block w-100" alt="..." height="500">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- slider -->
+
+    <!-- cards -->
+    <div class="cards">
+        <div class="container">
+            <div class="card_inner">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Add Fast Food
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/add_data" method="post">
+                                    <div class="mb-3">
+                                      <label for="exampleInputEmail1" class="form-label">Title</label>
+                                      <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                      <div id="emailHelp" class="form-text">Please, enter the name properly</div>
+                                    </div>
+                                    <div class="mb-3">
+                                      <label for="exampleInputPassword1" class="form-label">Description</label>
+                                      <input type="text" name="desc" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Old price</label>
+                                        <input type="text" name="old_price" class="form-control" id="exampleInputPassword1">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">New price</label>
+                                        <input type="text" name="new_price" class="form-control" id="exampleInputPassword1">
+                                      </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                  </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal -->
+                <h2 class="card_title mt-3 mb-3">
+                    Fast Food
+                </h2>
+                <div class="card_data d-flex flex-wrap justify-content-evenly gap-3 mb-5">
+                    <% dataMain.forEach(element=> { %>
+                        <div class="card" style="width: 18rem;">
+                            <img src="<%= element.img%>" class="card-img-top" alt="..." height="250">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <%= element.title%>
+                                </h5>
+                                <p class="card-text">
+                                    <%= element.desc%>
+                                </p>
+                                <del class="card-text">Previous price: <%= element.old_price%></del>
+                                <p class="card-text">New price: <%= element.new_price%>
+                                </p>
+                                <a href="/single/<%=element.id%>" class="btn btn-primary">More info</a>
+                            </div>
+                        </div>
+                        <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cards -->
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

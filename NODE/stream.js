@@ -27,8 +27,7 @@
 //     }
 // })
 // duplexStream.on('data', (chunk) => {
-//     console.log(chunk.toString());
-    
+//     console.log(chunk.toString());  
 // })
 // duplexStream.write('new text with duplex')
 // duplexStream.end()
