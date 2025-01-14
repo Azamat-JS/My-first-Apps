@@ -6,21 +6,19 @@ const Post = require("../models/post");
  * GET /
  * HOME
  */
-router.get("/", async(req, res) => {
+router.get("/", async (req, res) => {
   const locals = {
-    title: "NodeJS Blog",
-    description: "Simple blog created with NodeJS , Express & MongoDB.",
-  }
+      title: "NodeJS Blog",
+      description: "Simple blog created with NodeJS, Express & MongoDB.",
+  };
   try {
-    const data = await Post.find()
-    res.render("index", {locals, data});
+      const data = await Post.find();
+      res.render("index", { locals, data });
   } catch (error) {
-    console.log(error);
+      console.error("Error fetching posts:", error);
+      res.status(500).send("Internal Server Error");
   }
 });
-
-router
-
 
 
 router.get("/about", (req, res) => {
