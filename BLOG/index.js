@@ -1,10 +1,12 @@
 const express = require('express')
 require('dotenv').config()
 const expressLayout = require('express-ejs-layouts')
+const connectDB = require('./server/config/db')
 const mainEjs = require('./server/routes/main')
 const app = express()
 
-
+// connect to DB
+connectDB()
 app.use(express.static('public'))
 
 //-- Templating engines
